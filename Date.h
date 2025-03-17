@@ -9,7 +9,6 @@ private:
     int day;
     int year;
     bool isValidDate(int m, int d, int y) const;
-    bool isLeapYear(int y) const;
 
 public:
     // Constructor
@@ -19,13 +18,13 @@ public:
     void setDate(int m, int d, int y);
 
     // Accessors
-    int getMonth() const { return month; }
-    int getDay() const { return day; }
-    int getYear() const { return year; }
+    int getMonth() const;
+    int getDay() const;
+    int getYear() const;
 
     // Leap year functions
     bool isLeapYear() const;
-    bool isLeapYear(int y) const;
+    bool isLeapYear(int year) const;
 
     // Last day of the month functions
     int lastDay() const;

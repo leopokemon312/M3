@@ -1,6 +1,5 @@
 #include "Date.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -12,12 +11,7 @@ bool Date::isValidDate(int m, int d, int y) const {
     return true;
 }
 
-// Helper function to check leap year
-bool Date::isLeapYear(int y) const {
-    return (y % 4 == 0 && y % 100 != 0) || (y % 400 == 0);
-}
-
-// Default + Parameterized Constructor
+// Constructor
 Date::Date(int m, int d, int y) {
     if (isValidDate(m, d, y)) {
         month = m;
@@ -44,6 +38,19 @@ void Date::setDate(int m, int d, int y) {
         day = 1;
         year = 1900;
     }
+}
+
+// Accessor functions
+int Date::getMonth() const {
+    return month;
+}
+
+int Date::getDay() const {
+    return day;
+}
+
+int Date::getYear() const {
+    return year;
 }
 
 // Leap year functions
